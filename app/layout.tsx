@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Outfit } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const inter = Inter({
+const outfit = Outfit({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-outfit',
   display: 'swap',
 })
 
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
 }
+import { Background } from '@/components/background'
 
 export default function RootLayout({
   children,
@@ -29,7 +30,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
+      <body className={`${outfit.variable} font-sans antialiased bg-background text-foreground`}>
+        <Background />
         {children}
         <Analytics />
       </body>

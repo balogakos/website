@@ -83,7 +83,7 @@ export function FadeStagger({ children, className, threshold = 0.1, delay = 0 }:
 interface FadeItemProps {
   children: React.ReactNode
   className?: string
-  as?: "div" | "li" | "article" | "p" | "span"
+  as?: "div" | "li" | "article" | "p" | "span" | "h3"
 }
 
 const MotionComponents = {
@@ -92,6 +92,7 @@ const MotionComponents = {
   article: motion.article,
   p: motion.p,
   span: motion.span,
+  h3: motion.h3,
 }
 
 export function FadeItem({ children, className, as = "div" }: FadeItemProps) {

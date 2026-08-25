@@ -32,14 +32,24 @@ export function Contact() {
                 Get in Touch
               </h2>
               <p className="text-[15px] text-muted-foreground leading-relaxed max-w-[55ch] mb-6">
-                For research, collaboration, or enquiries, please reach out via email.
+                For research, collaboration, or enquiries, please reach out via email or via LinkedIn.
               </p>
-              <a
-                href="mailto:akos.balog@university.ac.uk"
-                className="text-[15px] font-medium text-[var(--brand-accent)] hover:text-[var(--brand-accent-hover)] underline underline-offset-4 transition-colors"
-              >
-                akos.balog@university.ac.uk
-              </a>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="mailto:sgabalog@liverpool.ac.uk"
+                  className="text-[15px] font-medium text-[var(--brand-accent)] hover:text-[var(--brand-accent-hover)] underline underline-offset-4 transition-colors w-fit"
+                >
+                  sgabalog@liverpool.ac.uk
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/%C3%A1kos-balog-32b566201/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[15px] font-medium text-[var(--brand-accent)] hover:text-[var(--brand-accent-hover)] underline underline-offset-4 transition-colors w-fit"
+                >
+                  LinkedIn
+                </a>
+              </div>
             </FadeUp>
           </div>
         </div>

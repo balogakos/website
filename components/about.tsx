@@ -5,19 +5,16 @@ import { FadeUp, FadeStagger, FadeItem } from "@/components/motion"
 
 const education = [
   {
-    dateRange: "2022 — Present",
-    degree: "PhD in Geographic Data Science",
+    dateRange: "2022 - Present",
+    degree: "Integrated Masters-PhD in Data Analytics and Society",
     institution: "University of Liverpool",
+    logo: "/gdsl-logo.png",
   },
   {
-    dateRange: "2020 — 2022",
-    degree: "MSc in Geographic Data Science",
+    dateRange: "2019 - 2022",
+    degree: "BA (Hons) Geography and Planning (1st Class)",
     institution: "University of Liverpool",
-  },
-  {
-    dateRange: "2017 — 2020",
-    degree: "BSc in Geography",
-    institution: "Eötvös Loránd University, Budapest",
+    logo: "/uol-logo.png",
   },
 ]
 
@@ -28,7 +25,8 @@ export function About() {
         <div className="grid grid-cols-12 gap-6">
 
           {/* ── Left: sticky label + heading ── */}
-          <div className="col-span-12 md:col-span-4">
+          <div className="col-span-12 md:col-span-4 relative">
+            <div className="absolute inset-[-2rem] bg-background/95 blur-2xl z-[-1] rounded-[50px] pointer-events-none" />
             <div className="md:sticky md:top-24">
               <FadeUp>
                 <SectionLabel>About</SectionLabel>
@@ -43,24 +41,14 @@ export function About() {
           </div>
 
           {/* ── Right: scrollable bio + education ── */}
-          <div className="col-span-12 md:col-span-8 lg:col-span-7 lg:col-start-6">
+          <div className="col-span-12 md:col-span-8 lg:col-span-7 lg:col-start-6 relative">
+            <div className="absolute inset-[-2rem] bg-background/95 blur-2xl z-[-1] rounded-[100px] pointer-events-none" />
             <FadeStagger className="space-y-4 text-[15px] leading-relaxed text-foreground max-w-[65ch]">
               <FadeItem as="p">
-                I am a PhD student in Geographic Data Science at the University of Liverpool,
-                working at the intersection of spatial analysis, urban systems, and digital
-                planning. My research is driven by a commitment to understanding how places
-                function and how data can inform more equitable and sustainable urban futures.
+                Data scientist and PhD researcher specialising in agent-based modelling, retail, and transport. Focusing on simulating urban systems to generate insights that support economic resilience and sustainable growth.
               </FadeItem>
               <FadeItem as="p">
-                My work draws on methods from computational social science, transport geography,
-                and applied machine learning to examine questions of retail resilience, consumer
-                behaviour, and spatial inequality. I am particularly interested in how
-                fine-grained spatial data can be used to develop actionable insights for
-                planners and policymakers.
-              </FadeItem>
-              <FadeItem as="p">
-                Before my PhD I completed an MSc in Geographic Data Science, where I developed
-                a strong foundation in spatial modelling, geodemographics, and network analysis.
+                Currently, I am working as a Research Assistant on the Night Ped Sim City project at the University of Liverpool and on the BENEFITS Horizon Europe Project at UCL. Passionate about applying advanced modelling to help cities and retail become smarter, more sustainable, and more resilient.
               </FadeItem>
             </FadeStagger>
 
@@ -76,11 +64,18 @@ export function About() {
                       <span className="text-xs text-muted-foreground pt-0.5 tabular-nums">
                         {item.dateRange}
                       </span>
-                      <div>
-                        <p className="text-sm font-semibold text-foreground leading-snug">
-                          {item.degree}
-                        </p>
-                        <p className="text-sm text-muted-foreground mt-0.5">{item.institution}</p>
+                      <div className="flex items-start gap-4">
+                        {(item as any).logo && (
+                          <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shrink-0 overflow-hidden border border-border mt-0.5">
+                            <img src={(item as any).logo} alt={`${item.institution} logo`} className="w-full h-full object-contain p-1.5" />
+                          </div>
+                        )}
+                        <div>
+                          <p className="text-sm font-semibold text-foreground leading-snug">
+                            {item.degree}
+                          </p>
+                          <p className="text-sm text-muted-foreground mt-0.5">{item.institution}</p>
+                        </div>
                       </div>
                     </FadeItem>
                   ))}

@@ -3,11 +3,12 @@
 import { useEffect, useState } from "react"
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Research", href: "#research" },
-  { label: "Projects", href: "#projects" },
-  { label: "Publications", href: "#publications" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Research", href: "/#research" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Publications", href: "/#publications" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/#contact" },
 ]
 
 export function Navbar() {
@@ -34,10 +35,10 @@ export function Navbar() {
         className="max-w-[1200px] mx-auto px-6 md:px-12 flex items-center justify-between h-14"
       >
         <a
-          href="#"
+          href="/"
           className="text-sm font-semibold tracking-tight text-foreground hover:opacity-70 transition-opacity"
         >
-          Akos Balog
+          Ákos Balog
         </a>
 
         {/* Desktop nav */}

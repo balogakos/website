@@ -20,10 +20,10 @@ export function Footer() {
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 flex items-center justify-between">
         <span className="text-xs text-muted-foreground">
-          Akos Balog &copy; {year}
+          Ákos Balog &copy; {year}
         </span>
         <span className="text-xs text-muted-foreground">
-          PhD Student, Geographic Data Science
+          Spatial Data Scientist
         </span>
       </div>
     </motion.footer>

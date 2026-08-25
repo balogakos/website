@@ -14,7 +14,7 @@ const themes = [
     number: "02",
     title: "Transport Geography, Infrastructure Planning and 15-Minute Cities",
     description:
-      "Exploring accessibility, modal shift, and the role of transport networks in enabling or constraining urban life — with a focus on proximity-based urban planning.",
+      "Exploring accessibility, modal shift, and the role of transport networks in enabling or constraining urban life with a focus on proximity-based urban planning.",
   },
   {
     number: "03",
@@ -45,7 +45,8 @@ export function Research() {
         <div className="grid grid-cols-12 gap-6">
 
           {/* Left sticky header */}
-          <div className="col-span-12 md:col-span-4">
+          <div className="col-span-12 md:col-span-4 relative">
+            <div className="absolute inset-[-2rem] bg-background/95 blur-2xl z-[-1] rounded-[50px] pointer-events-none" />
             <div className="md:sticky md:top-24">
               <FadeUp>
                 <SectionLabel>Research</SectionLabel>
@@ -59,8 +60,9 @@ export function Research() {
             </div>
           </div>
 
-          {/* Right: themes + methods */}
-          <div className="col-span-12 md:col-span-8 lg:col-span-7 lg:col-start-6">
+          {/* Right: Theme list */}
+          <div className="col-span-12 md:col-span-8 lg:col-span-7 lg:col-start-6 relative">
+            <div className="absolute inset-[-2rem] bg-background/95 blur-2xl z-[-1] rounded-[100px] pointer-events-none" />
 
             {/* Themes */}
             <div className="mb-16">

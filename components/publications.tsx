@@ -3,42 +3,72 @@
 import { SectionLabel } from "@/components/section-label"
 import { FadeUp, FadeStagger, FadeItem } from "@/components/motion"
 
-const publications = [
+const publicationCategories = [
   {
-    title:
-      "Measuring Retail Centre Vitality: A Multi-Indicator Spatial Framework for UK High Streets",
-    authors: "Balog, A., Smith, R., & Jones, C.",
-    venue: "Environment and Planning B: Urban Analytics and City Science",
-    year: "2024",
+    title: "Publications",
+    items: [
+      {
+        title: "Leveraging advanced technologies for (smart) transportation planning: A systematic review",
+        authors: "H Son, J Jang, J Park, A Balog, P Ballantyne, HR Kwon, A Singleton, ...",
+        venue: "Sustainability 17 (5), 2245",
+        year: "2025",
+        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pgHA5lIAAAAJ&citation_for_view=pgHA5lIAAAAJ:UeHWp8X0CEIC",
+      },
+      {
+        title: "Developing an open, national-level, small-area geodemographic classification of consumer behaviour",
+        authors: "Á Balog, L Dolega, R Mahabir, P Ballantyne, P Williamson",
+        venue: "International Journal of Retail & Distribution Management, 1-16",
+        year: "2026",
+        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pgHA5lIAAAAJ&citation_for_view=pgHA5lIAAAAJ:eQOLeE2rZwMC",
+      }
+    ]
   },
   {
-    title:
-      "Agent-Based Simulation of Consumer Behaviour in Retail Environments Under Disruption",
-    authors: "Balog, A., & Davies, L.",
-    venue: "Computers, Environment and Urban Systems",
-    year: "2023",
+    title: "Preprints",
+    items: [
+      {
+        title: "Exploring Retail Competition and Consumer Behaviour: An Agent-Based Model of Metropolitan Retail Centres",
+        authors: "A Balog, R Mahabir, L Dolega, G Filomena",
+        venue: "Preprint",
+        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pgHA5lIAAAAJ&citation_for_view=pgHA5lIAAAAJ:YsMSGLbcyi4C",
+      }
+    ]
   },
   {
-    title:
-      "Accessibility, Proximity, and the 15-Minute City: A Spatial Analysis of Urban Service Coverage",
-    authors: "Balog, A., Thompson, K., & Patel, S.",
-    venue: "Urban Studies",
-    year: "2023",
+    title: "Under Review",
+    items: [
+      {
+        title: "Network Contagion and the Persistence of Inequality: An Empirically Grounded Agent-Based Model of Unemployment Recovery",
+        authors: "Balog, A., Melios, G., Aslam, N.S., Tzivanakis, N., Moore, H.",
+        venue: "Social Networks. (Awaiting review)",
+      },
+      {
+        title: "A framework for transport digital twin design and implementation for urban decision-making: Lessons from twin cities in the United Kingdom and South Korea",
+        authors: "Kwon, H.R., Ballantyne, P., Balog, A., Jang, J., Son, H., Hwang, J., Singleton, A.",
+        venue: "Harvard Data Science Review. (Submitted for special issue)",
+      }
+    ]
   },
   {
-    title:
-      "Place-Based Deprivation and Retail Decline: Spatial Inequality in British Town Centres",
-    authors: "Balog, A.",
-    venue: "Regional Studies",
-    year: "2022",
-  },
-  {
-    title:
-      "Geodemographic Classification of Retail Catchments Using Open Spatial Data",
-    authors: "Balog, A., & Green, M.",
-    venue: "Applied Geography",
-    year: "2022",
-  },
+    title: "Working Papers",
+    items: [
+      {
+        title: "Using LLMs to Generate Synthetic Mobility Data",
+        authors: "Balog, A., Murphy, J., Reyes, P., Cucchietti, F.",
+        venue: "Target journal: Urban Transitions",
+      },
+      {
+        title: "Nighttime PedSim City: Developing an ABM of Nighttime Walking for Policy Testing Scenarios",
+        authors: "Filomena, G., Balog, A., Garofani, G., Nausto, A.",
+        venue: "Target journal: Cities",
+      },
+      {
+        title: "From Visitation to Performance: Empirical Validation of an Agent-Based Model of Retail Centre Competition",
+        authors: "Balog, A., Filomena, G., Dolega, L., Mahabir, R.",
+        venue: "Target journal: Computers, Environment and Urban Systems. Available at SSRN 6753765",
+      }
+    ]
+  }
 ]
 
 export function Publications() {
@@ -52,7 +82,8 @@ export function Publications() {
         <div className="grid grid-cols-12 gap-6">
 
           {/* Left sticky header */}
-          <div className="col-span-12 md:col-span-4">
+          <div className="col-span-12 md:col-span-4 relative">
+            <div className="absolute inset-[-2rem] bg-background/95 blur-2xl z-[-1] rounded-[50px] pointer-events-none" />
             <div className="md:sticky md:top-24">
               <FadeUp>
                 <SectionLabel>Publications</SectionLabel>
@@ -66,31 +97,49 @@ export function Publications() {
             </div>
           </div>
 
-          {/* Right: publication list */}
-          <div className="col-span-12 md:col-span-8 lg:col-span-7 lg:col-start-6">
-            <FadeStagger threshold={0.05}>
-              <ol className="space-y-0">
-                {publications.map((pub, idx) => (
-                  <FadeItem as="li" key={idx} className="grid grid-cols-12 gap-4 border-t border-border py-6 group">
-                    <div className="col-span-1 hidden md:block">
-                      <span className="text-xs font-mono text-muted-foreground">
-                        {String(idx + 1).padStart(2, "0")}
-                      </span>
-                    </div>
-                    <div className="col-span-12 md:col-span-11 flex flex-col gap-1">
-                      <p className="text-[15px] font-medium text-foreground leading-snug text-balance">
-                        {pub.title}
-                      </p>
-                      <p className="text-sm text-muted-foreground">{pub.authors}</p>
-                      <div className="flex items-center gap-2 mt-1">
-                        <span className="text-xs text-muted-foreground italic">{pub.venue}</span>
-                        <span className="text-xs text-muted-foreground">·</span>
-                        <span className="text-xs text-muted-foreground">{pub.year}</span>
-                      </div>
-                    </div>
+          {/* Right: publication lists by category */}
+          <div className="col-span-12 md:col-span-8 lg:col-span-7 lg:col-start-6 relative">
+            <div className="absolute inset-[-2rem] bg-background/95 blur-2xl z-[-1] rounded-[100px] pointer-events-none" />
+            <FadeStagger threshold={0.05} className="space-y-16">
+              {publicationCategories.map((category) => (
+                <div key={category.title}>
+                  <FadeItem as="h3" className="text-xs tracking-widest uppercase text-muted-foreground mb-6">
+                    {category.title}
                   </FadeItem>
-                ))}
-              </ol>
+                  <ol className="space-y-0">
+                    {category.items.map((pub, idx) => (
+                      <FadeItem as="li" key={idx} className="grid grid-cols-12 gap-4 border-t border-border py-6 group">
+                        <div className="col-span-1 hidden md:block">
+                          <span className="text-xs font-mono text-muted-foreground">
+                            {String(idx + 1).padStart(2, "0")}
+                          </span>
+                        </div>
+                        <div className="col-span-12 md:col-span-11 flex flex-col gap-1">
+                          <p className="text-[15px] font-medium text-foreground leading-snug text-balance">
+                            {pub.link ? (
+                              <a href={pub.link} target="_blank" rel="noreferrer" className="hover:underline hover:text-[var(--brand-accent)]">
+                                {pub.title}
+                              </a>
+                            ) : (
+                              pub.title
+                            )}
+                          </p>
+                          <p className="text-sm text-muted-foreground">{pub.authors}</p>
+                          <div className="flex items-center gap-2 mt-1 flex-wrap">
+                            <span className="text-xs text-muted-foreground italic">{pub.venue}</span>
+                            {pub.year && (
+                              <>
+                                <span className="text-xs text-muted-foreground">·</span>
+                                <span className="text-xs text-muted-foreground">{pub.year}</span>
+                              </>
+                            )}
+                          </div>
+                        </div>
+                      </FadeItem>
+                    ))}
+                  </ol>
+                </div>
+              ))}
             </FadeStagger>
           </div>
         </div>
