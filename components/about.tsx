@@ -5,10 +5,10 @@ import { FadeUp, FadeStagger, FadeItem } from "@/components/motion"
 
 const education = [
   {
-    dateRange: "2022 - Present",
+    dateRange: "2022 - 2026",
     degree: "Integrated Masters-PhD in Data Analytics and Society",
     institution: "University of Liverpool",
-    logo: "/gdsl-logo.png",
+    logo: "/uol-logo.png",
   },
   {
     dateRange: "2019 - 2022",
