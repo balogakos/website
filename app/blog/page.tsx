@@ -2,12 +2,12 @@ import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { blogPosts } from "@/lib/blog-data"
-import { Calendar, Clock, ArrowRight, Tag, BookOpen, Sparkles } from "lucide-react"
+import { Calendar, Clock, ArrowRight, Tag, BookOpen, Sparkles, Globe2 } from "lucide-react"
 
 export const metadata = {
   title: "Blog & Research Insights — Ákos Balog",
   description:
-    "Articles and insights on geographic data science, agent-based modelling, retail resilience, and spatial analytics.",
+    "Articles, research reflections, and field experiences in geographic data science, agent-based modelling, retail resilience, and smart mobility.",
 }
 
 export default function BlogPage() {
@@ -25,7 +25,7 @@ export default function BlogPage() {
               Blog
             </h1>
             <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
-              Career updates, research reflections, and methodology discussions on spatial data science,
+              Career updates, research reflections, international visits, and methodology discussions on spatial data science,
               agent-based modelling, urban analytics, and Smart Data.
             </p>
           </div>
@@ -40,12 +40,19 @@ export default function BlogPage() {
                 {/* Tags & meta */}
                 <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground mb-4">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--brand-accent)]/10 px-3 py-1 font-medium text-[var(--brand-accent)]">
-                    {post.category === "Announcement" ? (
+                    {post.category === "Announcement" && (
                       <>
                         <Sparkles className="w-3.5 h-3.5" />
                         Career Update
                       </>
-                    ) : (
+                    )}
+                    {post.category === "Research" && (
+                      <>
+                        <Globe2 className="w-3.5 h-3.5" />
+                        Visiting Researcher
+                      </>
+                    )}
+                    {post.category === "Publication" && (
                       <>
                         <BookOpen className="w-3.5 h-3.5" />
                         New Publication

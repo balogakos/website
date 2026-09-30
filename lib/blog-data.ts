@@ -6,7 +6,7 @@ export interface BlogPost {
   readingTime: string
   tags: string[]
   excerpt: string
-  category: "Publication" | "Announcement"
+  category: "Publication" | "Announcement" | "Research"
   doi?: string
   journal?: string
   paperUrl?: string
@@ -38,6 +38,29 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "I am thrilled to announce that I have joined the UKRI-funded Geographic Data Service (GeoDS) at the University of Liverpool as a permanent Research Data Scientist, working alongside Professor Alex Singleton to turn Smart Data into actionable evidence for spatial equity and policy.",
     externalUrl: "https://www.geods.ac.uk",
+    authors: ["Ákos Balog"],
+  },
+  {
+    slug: "visiting-researcher-south-korea-pusan-national-university",
+    title:
+      "Reflections on Being a Visiting Researcher in South Korea: ABM, Digital Twins, and Cross-Border Collaborations",
+    subtitle:
+      "From teaching hands-on agent-based modelling seminars at Pusan National University to collaborating with Sundosoft, Podaris, KRIHS, and Hanyang University.",
+    date: "July 2025",
+    readingTime: "5 min read",
+    category: "Research",
+    tags: [
+      "Visiting Researcher",
+      "South Korea",
+      "Agent-Based Modelling",
+      "Digital Twins",
+      "Pusan National University",
+      "Urban Planning",
+    ],
+    excerpt:
+      "Highlights from my time in South Korea as a Visiting Researcher on the Korea-UK Digital Transport project: teaching ABM to PNU students, spending a week with Sundosoft, co-authoring research with Prof. Jinuk Hwang and Dr. Jinhyeok Jang, and presenting at KRIHS and Hanyang University.",
+    newsUrl:
+      "https://news.liverpool.ac.uk/2025/07/09/lcr-digital-transport-project-with-south-korea-to-be-expanded/",
     authors: ["Ákos Balog"],
   },
   {
