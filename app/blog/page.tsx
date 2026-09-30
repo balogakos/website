@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { blogPosts } from "@/lib/blog-data"
-import { Calendar, Clock, ArrowRight, Tag, BookOpen } from "lucide-react"
+import { Calendar, Clock, ArrowRight, Tag, BookOpen, Sparkles } from "lucide-react"
 
 export const metadata = {
   title: "Blog & Research Insights — Ákos Balog",
@@ -19,14 +19,14 @@ export default function BlogPage() {
           {/* Header */}
           <div className="max-w-3xl mb-16">
             <span className="text-xs tracking-widest uppercase text-muted-foreground font-medium">
-              Writing &amp; Publications
+              Writing &amp; Updates
             </span>
             <h1 className="mt-3 text-4xl md:text-5xl font-bold tracking-tight text-foreground">
               Blog
             </h1>
             <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
-              Research reflections, methodology deep dives, and discussions on spatial data science,
-              agent-based modelling, urban analytics, and retail dynamics.
+              Career updates, research reflections, and methodology discussions on spatial data science,
+              agent-based modelling, urban analytics, and Smart Data.
             </p>
           </div>
 
@@ -40,8 +40,17 @@ export default function BlogPage() {
                 {/* Tags & meta */}
                 <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground mb-4">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--brand-accent)]/10 px-3 py-1 font-medium text-[var(--brand-accent)]">
-                    <BookOpen className="w-3.5 h-3.5" />
-                    New Publication
+                    {post.category === "Announcement" ? (
+                      <>
+                        <Sparkles className="w-3.5 h-3.5" />
+                        Career Update
+                      </>
+                    ) : (
+                      <>
+                        <BookOpen className="w-3.5 h-3.5" />
+                        New Publication
+                      </>
+                    )}
                   </span>
                   <span className="inline-flex items-center gap-1">
                     <Calendar className="w-3.5 h-3.5" />

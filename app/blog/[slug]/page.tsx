@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer"
 import { blogPosts, type BlogPost } from "@/lib/blog-data"
 import { GeodemographicsPostContent } from "@/components/blog/geodemographics-post"
 import { SmartTransportPostContent } from "@/components/blog/smart-transport-post"
+import { NewJobPostContent } from "@/components/blog/new-job-post"
 import {
   ArrowLeft,
   Calendar,
@@ -13,6 +14,8 @@ import {
   BookOpen,
   Tag,
   Globe2,
+  Building2,
+  Sparkles,
 } from "lucide-react"
 
 export async function generateStaticParams() {
@@ -110,14 +113,26 @@ export default async function BlogPostPage({
               </div>
 
               <div className="flex items-center gap-3">
-                <a
-                  href={post.paperUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-[var(--brand-accent)] hover:underline"
-                >
-                  <BookOpen className="w-3.5 h-3.5" /> Read Paper
-                </a>
+                {post.paperUrl && (
+                  <a
+                    href={post.paperUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 font-medium text-[var(--brand-accent)] hover:underline"
+                  >
+                    <BookOpen className="w-3.5 h-3.5" /> Read Paper
+                  </a>
+                )}
+                {post.externalUrl && (
+                  <a
+                    href={post.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 font-medium text-[var(--brand-accent)] hover:underline"
+                  >
+                    <Globe2 className="w-3.5 h-3.5" /> geods.ac.uk
+                  </a>
+                )}
                 {post.githubUrl && (
                   <a
                     href={post.githubUrl}
@@ -142,34 +157,41 @@ export default async function BlogPostPage({
             </div>
           </header>
 
-          {/* Quick Info / Callout Card */}
-          <div className="my-8 rounded-xl border border-[var(--brand-accent)]/30 bg-[var(--brand-accent)]/5 p-6 md:p-8">
-            <h2 className="text-base font-semibold text-foreground flex items-center gap-2 mb-3">
-              <BookOpen className="w-5 h-5 text-[var(--brand-accent)]" />
-              Paper Overview &amp; Key Details
-            </h2>
-            <ul className="space-y-2 text-sm text-foreground/90 leading-relaxed list-disc list-inside">
-              <li>
-                <strong>Published in:</strong> <em>{post.journal}</em>
-              </li>
-              <li>
-                <strong>DOI:</strong>{" "}
-                <a
-                  href={`https://doi.org/${post.doi}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--brand-accent)] underline underline-offset-2 hover:opacity-80"
-                >
-                  {post.doi}
-                </a>
-              </li>
-              <li>
-                <strong>Open Access:</strong> Available to read and download openly with no paywall.
-              </li>
-            </ul>
-          </div>
+          {/* Quick Info Card */}
+          {post.category === "Publication" && post.journal && (
+            <div className="my-8 rounded-xl border border-[var(--brand-accent)]/30 bg-[var(--brand-accent)]/5 p-6 md:p-8">
+              <h2 className="text-base font-semibold text-foreground flex items-center gap-2 mb-3">
+                <BookOpen className="w-5 h-5 text-[var(--brand-accent)]" />
+                Paper Overview &amp; Key Details
+              </h2>
+              <ul className="space-y-2 text-sm text-foreground/90 leading-relaxed list-disc list-inside">
+                <li>
+                  <strong>Published in:</strong> <em>{post.journal}</em>
+                </li>
+                {post.doi && (
+                  <li>
+                    <strong>DOI:</strong>{" "}
+                    <a
+                      href={`https://doi.org/${post.doi}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[var(--brand-accent)] underline underline-offset-2 hover:opacity-80"
+                    >
+                      {post.doi}
+                    </a>
+                  </li>
+                )}
+                <li>
+                  <strong>Access:</strong> Open Access &bull; Freely available to read and download.
+                </li>
+              </ul>
+            </div>
+          )}
 
           {/* Dynamic Post Body */}
+          {slug === "joining-geods-research-data-scientist" && (
+            <NewJobPostContent post={post} />
+          )}
           {slug === "open-geodemographic-classification-consumer-behaviour" && (
             <GeodemographicsPostContent post={post} />
           )}

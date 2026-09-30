@@ -6,16 +6,40 @@ export interface BlogPost {
   readingTime: string
   tags: string[]
   excerpt: string
-  doi: string
-  journal: string
-  paperUrl: string
+  category: "Publication" | "Announcement"
+  doi?: string
+  journal?: string
+  paperUrl?: string
   githubUrl?: string
   newsUrl?: string
+  externalUrl?: string
   authors: string[]
-  bibtex: string
+  bibtex?: string
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "joining-geods-research-data-scientist",
+    title:
+      "New Chapter: Joining the Geographic Data Service (GeoDS) as Research Data Scientist",
+    subtitle:
+      "Stepping into a permanent role at the University of Liverpool to harness Smart Data for understanding and addressing regional spatial inequalities.",
+    date: "September 2026",
+    readingTime: "4 min read",
+    category: "Announcement",
+    tags: [
+      "Career",
+      "GeoDS",
+      "Smart Data",
+      "Spatial Inequality",
+      "University of Liverpool",
+      "Urban Analytics",
+    ],
+    excerpt:
+      "I am thrilled to announce that I have joined the UKRI-funded Geographic Data Service (GeoDS) at the University of Liverpool as a permanent Research Data Scientist, working alongside Professor Alex Singleton to turn Smart Data into actionable evidence for spatial equity and policy.",
+    externalUrl: "https://www.geods.ac.uk",
+    authors: ["Ákos Balog"],
+  },
   {
     slug: "open-geodemographic-classification-consumer-behaviour",
     title:
@@ -24,6 +48,7 @@ export const blogPosts: BlogPost[] = [
       "Bridging the small-area consumer insight gap across England and Wales using spatial microsimulation, open census data, and behavioral surveys.",
     date: "September 2026",
     readingTime: "6 min read",
+    category: "Publication",
     tags: [
       "Geodemographics",
       "Spatial Data Science",
@@ -64,6 +89,7 @@ export const blogPosts: BlogPost[] = [
       "A Sentence-BERT-powered systematic review exploring how IoT, AI, Digital Twins, and optimization intersect to solve urban mobility challenges.",
     date: "March 2025",
     readingTime: "5 min read",
+    category: "Publication",
     tags: [
       "Digital Twins",
       "Smart Transportation",
