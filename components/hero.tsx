@@ -98,8 +98,8 @@ export function Hero() {
           >
             <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl border border-border/50">
               <Image 
-                src="/hero-photo.png" 
-                alt="Ákos Balog presenting" 
+                src="/profile_pic.jpeg" 
+                alt="Ákos Balog" 
                 fill 
                 className="object-cover object-center"
                 sizes="(max-width: 768px) 100vw, 50vw"
