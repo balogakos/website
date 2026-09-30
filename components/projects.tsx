@@ -56,7 +56,7 @@ const currentProjects: Project[] = [
 const previousProjects = [
   { title: "Research Assistant: Korea-UK Digital Twin Approach", description: "Qualitative and computational analysis for transport digital twins and data governance.", logo: "/uol-logo.png" },
   { title: "Visiting Researcher: Pusan National University", description: "Contributed to a systematic literature review and implemented NLP models for transport challenges.", link: "https://news.liverpool.ac.uk/2025/07/09/lcr-digital-transport-project-with-south-korea-to-be-expanded/", logo: "/pusan-logo.svg" },
-  { title: "Visiting Researcher: Barcelona Supercomputing Centre", description: "Integrated LLMs with agent-based models to generate travel diaries on the MareNostrum supercomputer.", logo: "/bsc-logo.png" },
+  { title: "Visiting Researcher: Barcelona Supercomputing Centre", description: "Integrated LLMs with agent-based models to generate travel diaries on the MareNostrum supercomputer.", link: "/blog/visiting-researcher-barcelona-supercomputing-center", logo: "/bsc-logo.png" },
 ]
 
 function ProjectCard({ project }: { project: Project }) {

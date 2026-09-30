@@ -7,6 +7,7 @@ import { GeodemographicsPostContent } from "@/components/blog/geodemographics-po
 import { SmartTransportPostContent } from "@/components/blog/smart-transport-post"
 import { NewJobPostContent } from "@/components/blog/new-job-post"
 import { KoreaVisitingPostContent } from "@/components/blog/korea-visiting-post"
+import { BarcelonaVisitingPostContent } from "@/components/blog/barcelona-visiting-post"
 import {
   ArrowLeft,
   Calendar,
@@ -192,6 +193,9 @@ export default async function BlogPostPage({
           {/* Dynamic Post Body */}
           {slug === "joining-geods-research-data-scientist" && (
             <NewJobPostContent post={post} />
+          )}
+          {slug === "visiting-researcher-barcelona-supercomputing-center" && (
+            <BarcelonaVisitingPostContent post={post} />
           )}
           {slug === "visiting-researcher-south-korea-pusan-national-university" && (
             <KoreaVisitingPostContent post={post} />

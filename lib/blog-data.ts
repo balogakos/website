@@ -82,6 +82,29 @@ export const blogPosts: BlogPost[] = [
 }`,
   },
   {
+    slug: "visiting-researcher-barcelona-supercomputing-center",
+    title:
+      "Visiting Researcher at Barcelona Supercomputing Center: Simulating Urban Mobility with LLMs and MareNostrum",
+    subtitle:
+      "Harnessing large language models, demographic profiles, and high-performance computing to generate synthetic travel diaries and origin-destination matrices for Barcelona.",
+    date: "May 18, 2026",
+    readingTime: "5 min read",
+    category: "Research",
+    tags: [
+      "Visiting Researcher",
+      "Barcelona",
+      "Supercomputing",
+      "LLMs in Urban Science",
+      "Synthetic Mobility",
+      "Agent-Based Modelling",
+      "MareNostrum",
+    ],
+    excerpt:
+      "Reflections from my research visit to the Barcelona Supercomputing Center (BSC-CNS): collaborating with the Data Analytics and Visualisation team, conditioning LLMs on demographic profiles to generate synthetic OD travel diaries, and benchmarking against Barcelona's EMEF survey data.",
+    externalUrl: "https://www.bsc.es",
+    authors: ["Ákos Balog"],
+  },
+  {
     slug: "smart-transportation-planning-advanced-technologies",
     title:
       "Leveraging Advanced Technologies for (Smart) Transportation Planning: A Systematic Review",
