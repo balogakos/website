@@ -8,18 +8,18 @@ const publicationCategories = [
     title: "Publications",
     items: [
       {
-        title: "Leveraging advanced technologies for (smart) transportation planning: A systematic review",
-        authors: "H Son, J Jang, J Park, A Balog, P Ballantyne, HR Kwon, A Singleton, ...",
-        venue: "Sustainability 17 (5), 2245",
-        year: "2025",
-        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pgHA5lIAAAAJ&citation_for_view=pgHA5lIAAAAJ:UeHWp8X0CEIC",
-      },
-      {
         title: "Developing an open, national-level, small-area geodemographic classification of consumer behaviour",
         authors: "Á Balog, L Dolega, R Mahabir, P Ballantyne, P Williamson",
         venue: "International Journal of Retail & Distribution Management, 1-16",
         year: "2026",
         link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pgHA5lIAAAAJ&citation_for_view=pgHA5lIAAAAJ:eQOLeE2rZwMC",
+      },
+      {
+        title: "Leveraging advanced technologies for (smart) transportation planning: A systematic review",
+        authors: "H Son, J Jang, J Park, A Balog, P Ballantyne, HR Kwon, A Singleton, ...",
+        venue: "Sustainability 17 (5), 2245",
+        year: "2025",
+        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pgHA5lIAAAAJ&citation_for_view=pgHA5lIAAAAJ:UeHWp8X0CEIC",
       }
     ]
   },

@@ -55,10 +55,10 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile: just show links as icon-less row */}
-        <ul className="flex md:hidden items-center gap-4" role="list">
-          {navLinks.slice(0, 3).map((link) => (
-            <li key={link.href}>
+        {/* Mobile: show links */}
+        <ul className="flex md:hidden items-center gap-3.5 overflow-x-auto py-1" role="list">
+          {navLinks.map((link) => (
+            <li key={link.href} className="shrink-0">
               <a
                 href={link.href}
                 className="text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"

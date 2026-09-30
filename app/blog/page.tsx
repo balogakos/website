@@ -11,6 +11,10 @@ export const metadata = {
 }
 
 export default function BlogPage() {
+  const sortedPosts = [...blogPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  )
+
   return (
     <>
       <Navbar />
@@ -32,7 +36,7 @@ export default function BlogPage() {
 
           {/* Posts list */}
           <div className="space-y-8 max-w-4xl">
-            {blogPosts.map((post) => (
+            {sortedPosts.map((post) => (
               <article
                 key={post.slug}
                 className="group relative rounded-2xl border border-border/80 bg-card/40 p-8 transition-all duration-300 hover:border-[var(--brand-accent)]/50 hover:bg-card/70 hover:shadow-lg hover:shadow-[var(--brand-accent)]/5"
