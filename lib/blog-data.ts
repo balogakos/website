@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
       "New Chapter: Joining the Geographic Data Service (GeoDS) as Research Data Scientist",
     subtitle:
       "Stepping into a permanent role at the University of Liverpool to harness Smart Data for understanding and addressing regional spatial inequalities.",
-    date: "September 2026",
+    date: "September 30, 2026",
     readingTime: "4 min read",
     category: "Announcement",
     tags: [
@@ -41,35 +41,12 @@ export const blogPosts: BlogPost[] = [
     authors: ["Ákos Balog"],
   },
   {
-    slug: "visiting-researcher-south-korea-pusan-national-university",
-    title:
-      "Reflections on Being a Visiting Researcher in South Korea: ABM, Digital Twins, and Cross-Border Collaborations",
-    subtitle:
-      "From teaching hands-on agent-based modelling seminars at Pusan National University to collaborating with Sundosoft, Podaris, KRIHS, and Hanyang University.",
-    date: "July 2025",
-    readingTime: "5 min read",
-    category: "Research",
-    tags: [
-      "Visiting Researcher",
-      "South Korea",
-      "Agent-Based Modelling",
-      "Digital Twins",
-      "Pusan National University",
-      "Urban Planning",
-    ],
-    excerpt:
-      "Highlights from my time in South Korea as a Visiting Researcher on the Korea-UK Digital Transport project: teaching ABM to PNU students, spending a week with Sundosoft, co-authoring research with Prof. Jinuk Hwang and Dr. Jinhyeok Jang, and presenting at KRIHS and Hanyang University.",
-    newsUrl:
-      "https://news.liverpool.ac.uk/2025/07/09/lcr-digital-transport-project-with-south-korea-to-be-expanded/",
-    authors: ["Ákos Balog"],
-  },
-  {
     slug: "open-geodemographic-classification-consumer-behaviour",
     title:
       "Developing an Open, National-Level Geodemographic Classification of Consumer Behaviour",
     subtitle:
       "Bridging the small-area consumer insight gap across England and Wales using spatial microsimulation, open census data, and behavioral surveys.",
-    date: "September 2026",
+    date: "August 20, 2026",
     readingTime: "6 min read",
     category: "Publication",
     tags: [
@@ -110,7 +87,7 @@ export const blogPosts: BlogPost[] = [
       "Leveraging Advanced Technologies for (Smart) Transportation Planning: A Systematic Review",
     subtitle:
       "A Sentence-BERT-powered systematic review exploring how IoT, AI, Digital Twins, and optimization intersect to solve urban mobility challenges.",
-    date: "March 2025",
+    date: "March 5, 2025",
     readingTime: "5 min read",
     category: "Publication",
     tags: [
@@ -149,5 +126,28 @@ export const blogPosts: BlogPost[] = [
   doi     = {10.3390/su17052245},
   url     = {https://doi.org/10.3390/su17052245}
 }`,
+  },
+  {
+    slug: "visiting-researcher-south-korea-pusan-national-university",
+    title:
+      "Reflections on Being a Visiting Researcher in South Korea: ABM, Digital Twins, and Cross-Border Collaborations",
+    subtitle:
+      "From teaching hands-on agent-based modelling seminars at Pusan National University to collaborating with Sundosoft, Podaris, KRIHS, and Hanyang University.",
+    date: "July 15, 2024",
+    readingTime: "5 min read",
+    category: "Research",
+    tags: [
+      "Visiting Researcher",
+      "South Korea",
+      "Agent-Based Modelling",
+      "Digital Twins",
+      "Pusan National University",
+      "Urban Planning",
+    ],
+    excerpt:
+      "Highlights from my time in South Korea as a Visiting Researcher on the Korea-UK Digital Transport project: teaching ABM to PNU students, spending a week with Sundosoft, co-authoring research with Prof. Jinuk Hwang and Dr. Jinhyeok Jang, and presenting at KRIHS and Hanyang University.",
+    newsUrl:
+      "https://news.liverpool.ac.uk/2025/07/09/lcr-digital-transport-project-with-south-korea-to-be-expanded/",
+    authors: ["Ákos Balog"],
   },
 ]
