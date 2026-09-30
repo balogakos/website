@@ -23,7 +23,7 @@ export function Footer() {
           Ákos Balog &copy; {year}
         </span>
         <span className="text-xs text-muted-foreground">
-          Spatial Data Scientist
+          Research Data Scientist | Postdoctoral Researcher
         </span>
       </div>
     </motion.footer>

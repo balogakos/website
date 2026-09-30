@@ -45,10 +45,16 @@ export function About() {
             <div className="absolute inset-[-2rem] bg-background/95 blur-2xl z-[-1] rounded-[100px] pointer-events-none" />
             <FadeStagger className="space-y-4 text-[15px] leading-relaxed text-foreground max-w-[65ch]">
               <FadeItem as="p">
-                Data scientist and PhD researcher specialising in agent-based modelling, retail, and transport. Focusing on simulating urban systems to generate insights that support economic resilience and sustainable growth.
+                Data Scientist specialising in geographic data science, agent-based modelling and urban analytics. My work focuses on using spatial data and simulation to understand how people, places and urban systems interact, and to generate insights that support policy and decision-making.
               </FadeItem>
               <FadeItem as="p">
-                Currently, I am working as a Research Assistant on the Night Ped Sim City project at the University of Liverpool and on the BENEFITS Horizon Europe Project at UCL. Passionate about applying advanced modelling to help cities and retail become smarter, more sustainable, and more resilient.
+                I am currently a Research Data Scientist and Postdoctoral Researcher at the University of Liverpool, working within the Geographic Data Service (GeoDS) and the Geographic Data Science Laboratory (GDSL) on applied research across spatial inequality, population, transport and retail.
+              </FadeItem>
+              <FadeItem as="p">
+                My PhD at the University of Liverpool has focused on developing agent-based models of retail centres and consumer behaviour, alongside geodemographic and spatial approaches to understanding retail resilience and urban change. Alongside this, I have also contributed to projects including Night Ped Sim City, the Horizon Europe BENEFITS project, and a transport digital twin project with Podaris, Liverpool City Region Combined Authority and partners in South Korea.
+              </FadeItem>
+              <FadeItem as="p">
+                My wider research interests include geodemographics, microsimulation, digital twins and emerging forms of spatial data, particularly their application to understanding and improving cities and retail systems.
               </FadeItem>
             </FadeStagger>
 

@@ -10,14 +10,23 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: 'Akos Balog — Geographic Data Science',
+  title: 'Ákos Balog — Geographic Data Science',
   description:
-    'PhD Student in Geographic Data Science. Research in spatial data, urban systems, and digital planning.',
+    'Research Data Scientist & Postdoctoral Researcher in Geographic Data Science at the University of Liverpool. Research in spatial data, urban systems, and simulation.',
   generator: 'v0.app',
-  keywords: ['Geographic Data Science', 'Spatial Analysis', 'Urban Systems', 'PhD', 'Research'],
+  keywords: [
+    'Geographic Data Science',
+    'Spatial Analysis',
+    'Urban Systems',
+    'Agent-Based Modelling',
+    'Postdoctoral Researcher',
+    'Research Data Scientist',
+    'Research',
+  ],
   openGraph: {
-    title: 'Akos Balog — Geographic Data Science',
-    description: 'PhD Student in Geographic Data Science researching spatial data, urban systems, and digital planning.',
+    title: 'Ákos Balog — Geographic Data Science',
+    description:
+      'Research Data Scientist & Postdoctoral Researcher at the University of Liverpool working in spatial data, urban analytics, and simulation.',
     type: 'website',
   },
 }

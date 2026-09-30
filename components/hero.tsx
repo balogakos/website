@@ -46,7 +46,8 @@ export function Hero() {
               transition={{ delay: heroItems[1].delay }}
               className="text-2xl md:text-3xl font-light text-foreground tracking-tight"
             >
-              <span className="text-red-500 font-medium">Spatial Data Scientist</span><br />PhD Student at University of Liverpool
+              <span className="text-red-500 font-medium">Research Data Scientist | Postdoctoral Researcher</span><br />
+              Geographic Data Service &middot; University of Liverpool
             </motion.p>
 
             <motion.div
